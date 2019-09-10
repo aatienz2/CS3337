@@ -4,5 +4,5 @@
 :money_mouth_face:
 <br/>
 
-![GitHub Logo](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
-Format: ![Alt Text](url)
+![Google Logo](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+

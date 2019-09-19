@@ -35,6 +35,3 @@
     </table>
 </body>
 </html>
-
-<!-- Hello World -->
-<!-- Testing -->

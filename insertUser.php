@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Insert New User</title>
+    <title>Insert New User into Database</title>
 </head>
 <body>
     <?php
@@ -15,6 +15,8 @@
 			$_POST["password"] .
 			"')";
         $result = mysqli_query($connect, $insertUser);
+		
+		header("Location: login.html");
     ?>
 </body>
 </html>

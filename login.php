@@ -2,36 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Administrator</title>
+    <title>Login User</title>
 </head>
 <body>
     <?php
         $connect = mysqli_connect("localhost", "root", "123456");
         mysqli_select_db($connect, "p3337");
-        $selectUsers = "select * from users";
-        $results = mysqli_query($connect, $selectUsers);
+		
+        $queryUser = "select * from users where email='" .
+		$_POST["email"] .
+		"' and password='" .
+		$_POST["password"] .
+		"'";
+        $results = mysqli_query($connect, $queryUser);
+		
+		if(mysqli_num_rows($results) == 0){
+			header("Location: login.html");
+			exit;
+		}
+		if(mysqli_num_rows($results) > 0){
+			session_start();
+			$_SESSION['email'] = $_POST["email"];
+			$_SESSION['password'] = $_POST["password"];
+			header("Location: main.php");
+		}
     ?>
-    <table align="center" border="2">
-    <tr>
-        <th>
-        Email
-        </th>
-        <th>
-        Password
-        </th>
-    </tr>
-    <?php
-    while ($row = mysqli_fetch_assoc($results)){
-        print("<tr>");
-        print("<td>");
-        print($row["email"]);
-        print("</td>");
-        print("<td>");
-        print($row["password"]);
-        print("</td>");
-        print("</tr>");
-    }
-    ?>
-    </table>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<link href="main.css" type="text/css" rel="stylesheet"/>
 <?php
 	session_start();
 	$parameters = 'email=' .
@@ -10,7 +11,7 @@
 		<a class="li_css_a"href="shopping"> Shopping </a>
 	</li>
 	<li class="li_css">
-		<a class="li_css_a"href="selling"> Selling </a>
+		<a class="li_css_a"href="selling.php"> Selling </a>
 	</li>
 	<li class="li_css">
 		<a class="li_css_a"href="profile"> Profile </a>

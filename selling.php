@@ -20,7 +20,7 @@
         Email
         </td>
 		<td>
-		<input type="text" name="email">
+		<input type="text" name="email" value="<?php print $_SESSION["email"]; ?>">
 		</td>
     </tr>
 	<tr>
